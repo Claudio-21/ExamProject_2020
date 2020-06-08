@@ -1,7 +1,9 @@
 ::::::::::::::: Applicativo cucina :::::::::::::::
---- Coda piatti...
---- Visualizza articoli in stato dispensa 
+--sistemare dbcheck
+--- in inserimento prezzo di un nuovo articolo gestirlo come double/float
+!-- forse permettere di eliminare un prodotto dal db
 ::::::::::::::: Applicativo tavoli :::::::::::::::
---- Nuovo ordine...
---- Modifica ordine...
---- Conferma ordine...
+
+::::::::::::::: DB :::::::::::::::
+
+::::::::::::::: Network :::::::::::::::

@@ -1,5 +1,6 @@
 <?php
-  session_start();
+  if(!isset($_SESSION['status']))
+    session_start();
   include '../utilityPHP/globalVar.php';
   global $ip, $porta, $qm1, $qm2, $qm3, $qm4, $qm5;
 
@@ -37,7 +38,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Coda Piatti</a>
+          <a class="nav-link text-light" href="../codaPiatti/codaPiattiPronti.php">Coda Piatti</a>
         </li>
 
         <li class="nav-item">
@@ -51,7 +52,7 @@
         <li class="nav-item">
           <a class="nav-link text-light" href="../sezioneSpesa/spesa.php">Spesa</a>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link text-light" href="../newProdotto/addProdotto.php">New Prodotto</a>
         </li>

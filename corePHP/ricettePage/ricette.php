@@ -38,7 +38,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Coda Piatti</a>
+          <a class="nav-link text-light" href="../codaPiatti/codaPiattiPronti.php">Coda Piatti</a>
         </li>
 
         <li class="nav-item active">
@@ -52,7 +52,7 @@
         <li class="nav-item">
           <a class="nav-link text-light" href="../sezioneSpesa/spesa.php">Spesa</a>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link text-light" href="../newProdotto/addProdotto.php">New Prodotto</a>
         </li>
@@ -64,19 +64,19 @@
      </div>
     </nav>
 
-    <div class="jumbotron">
-     <h3 class="display-2"><p class="text-center">Qui troverai tutte le ricette</p></h3>
-     <p class="lead text-center">In più potrai aggiungerne delle nuove!</p>
-   </div>
-
-   <!-- nested columns -->
-    <div class="row justify-content-center">
-     <!-- first nested column -->
-       <div class="col-sm-6">
-         <?php
-          echo bulidCarousel();
-         ?>
-       </div>
+    <div class="container justify-content-center">
+      <br><br><br><br><br>
+     <h3 class="text-center">Qui troverai tutte le ricette</h3>
+     <!-- nested columns -->
+     <br>
+      <div class="row justify-content-center">
+       <!-- first nested column -->
+         <div class="col-md-10">
+           <?php
+            echo bulidCarousel();
+           ?>
+         </div>
+      </div>
     </div>
   </body>
 </html>

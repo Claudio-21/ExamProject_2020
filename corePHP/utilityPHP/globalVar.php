@@ -5,7 +5,7 @@
 //CONTROLLO IP
   $IPpt1 = "192";
   $IPpt2 = "168";
-  $IPpt3 = "1";
+  $IPpt3 = "3";
 //PARAMETRI CONNESSIONE DATABASE
   $servername = "localhost";
   $usernameDb = "root";

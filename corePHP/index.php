@@ -11,6 +11,9 @@
     $_SESSION['imgOK'] = "";
     $_SESSION['listaOK'] = "";
     $_SESSION['tempoOK'] = "";
+    $_SESSION['updSts'] = "";
+    $_SESSION['gestoreOrdini'] = "";
+    $_SESSION['controlloQuat'] = "";
     $_SESSION['newProdottoOK'] = false;
     $_SESSION['addOK'] = false;
     header("location: indexAutorized.php");

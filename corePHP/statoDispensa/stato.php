@@ -1,5 +1,6 @@
 <?php
-  session_start();
+  if(!isset($_SESSION['status']))
+    session_start();
   include '../utilityPHP/globalVar.php';
   include 'builderStatoDispensa.php';
   global $ip, $porta;
@@ -55,7 +56,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Coda Piatti</a>
+          <a class="nav-link text-light" href="../codaPiatti/codaPiattiPronti.php">Coda Piatti</a>
         </li>
 
         <li class="nav-item">
@@ -69,7 +70,7 @@
         <li class="nav-item">
           <a class="nav-link text-light" href="../sezioneSpesa/spesa.php">Spesa</a>
         </li>
-        
+
         <li class="nav-item">
           <a class="nav-link text-light" href="../newProdotto/addProdotto.php">New Prodotto</a>
         </li>
@@ -83,7 +84,7 @@
 
     <div class="container text-center">
        <br><br><br>
-       <h3 >Dispensa</h3>
+       <h3 >Dispensa/Inventario</h3>
        <hr class="my-4">
        <!-- nested columns -->
        <div class="d-flex justify-content-start">

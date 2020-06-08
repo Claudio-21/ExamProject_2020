@@ -1,0 +1,142 @@
+testimone inconsapevole :::leggere:::
+https://meet.google.com/xcw-hfdp-tix ::::Link Porciatti::::
+
+  try {
+    $co->begin_transaction(MYSQLI_TRANS_START_READ_WRITE);
+    $co->commit();
+    $co->close();
+  } catch (Exception $e) {
+      $co->rollBack();
+      $co->close();
+      header("Location: http://" .$ip .":" .$porta ."/esPHP/InnovativeBuzzi/Errore/Errore.php?msg=Siamo spiacente si è verificato un imprevisto");
+  }
+
+
+Ciao Ferencz,
+hai fatto un buon lavoro, hai messo cura ed attenzione su molti aspetti, ma dobbiamo sistemarne un po' altri.
+
+Anche nel tuo caso l'impaginazione è saltata, passando da un applicativo all'altro. Conviene sempre consegnare il pdf (o anche il pdf), in modo da evitare questi problemi.
+
+-TIPO DI SOCIETÀ: troppo breve, non hai inquadrato a sufficienza l'azienda. Cos'è il gruppo CAD IT? Spiegare. L'azienda è di Prato?
+
+-DIAGRAMMA FUNZIONALE TEORICO
+Non esistono i diagrammi funzionali, ma gli organigrammi funzionali. Perché dici che è teorico? Spiegare. Non mettere mai nomi propri di persone diverse da te. Basta il ruolo, non serve il nome.
+Ogni casella è una funzione, non una persona, quindi ad esempio raggruppa tutti i programmatori in un'unico rettangolo.
+
+-TIPOLOGIA DI PRODUZIONE
+Rivedi il secondo paragrafo, perché mi sa tanto di pubblicità da sito web. Smorza i toni, e cerca di entrare più nel merito della loro offerta commerciale.
+
+Aggiungi un capitolo ORGANIZZAZIONE DEL LAVORO: nel quale spieghi cosa hai visto, come sono organizzate le loro giornate, il loro lavoro. 
+A volte c'è un'organizzazione molto strutturata, per es. ogni mattina i vari gruppi di lavoro si riuniscono per fare il punto sulle attività da fare.In altri contesti semplicemente si aspetta che entrino clienti
+(es. negozi di assistenza tecnica). Cosa succedeva lì?
+
+-DESCRIZIONE DETTAGLIATA DEL LAVORO SVOLTO
+Metti, subito all'inizio, prima dei progetti, una piccola introduzione complessiva su quello che vai a presentare dopo più dettagliatamente. Così è troppo "brutale" (passami il termine).
+
+-PRIMO PROGETTO: scrivi tante volte "stagista", ma non eri uno stagista. Puoi tranquillamente parlare in prima persona.
+Non scrivere "Necessità", ma "Descrizione dell'esigenza". E, all'interno, anziché "La necessità è quella di preparare lo stagista a lavorare...",
+scrivi ad esempio: "Questa attività aveva lo scopo di introdurmi al lavoro...."
+
+Prima dei requisiti, metti un'altra sezione 
+-METODO DI LAVORO
+Ti è stato fatto proprio un corso? O ti spiegavano un argomento e tu facevi un pezzo di programma? Oppure? Come è andata?
+
+REQUISITI: tra "ovvero" e i due punti c'è uno spazio, toglilo. poi metterei l'elenco che viene dopo sotto forma di elenco puntato, così è più schematico, che dici?
+Diagramma dei casi d'uso: se metti <<include>> tra login e registrazione, significa che ogni volta che viene effettuato il login viene attivato in maniera obbligatoria il caso d'uso Registrazione.
+Ma non è così, devi correggere. L'associazione giusta potrebbe essere (ma dipende da cosa hai implementato nell'applicazione) con la freccia nell'altro senso e la parola chiave <<extends>>,
+perché il login potrebbe a volte attivare la registrazione. Se invece non hai messo questa possibilità (cioè che la schermata di login abbia un link o un bottone o altri elementi analoghi che ti portino alla 
+pagina di registrazione), non devi mettere nessuna freccia tra i due casi d'uso.
+Poi, la connessione tra Utente e Login puoi anche toglierla, perché è compresa nell'include. Io metterei proprio due attori: utente e utente registrato, così solo l'utente registrato è collegato ai casi d'uso 
+della CRUD vera e propria. L'utente (non registrato) invece può fare solo la registrazione.
+
+Metti una didascalia al diagramma: "Use case diagram -o in italiano -dell'applicazione", o simile. Le immagini vanno sempre corredate da didascalia.
+
+-TECNOLOGIE ADOTTATE: hai scritto linugaggio anziché linguaggio.
+Anche qui, l'elenco delle tecnologie mettilo proprio con un elenco puntato.
+Ripeto che prima dei due punti non ci vuole lo spazio, e dopo i due punti ce ne va uno solo e non tre. Così come dopo il punto, dopo la virgola, ecc.
+Le tecnologie le hai scelte tu o ti sono state fornite come requisito? Penso la seconda, ma spiegalo.
+Nell'ultima frase parli di !application web", ma non è il web ad essere applicativo, bensì è l'applicazione ad essere per il web, quindi devi scrivere "web application".
+
+Il diagramma delle classi è molto piccolo, non si legge. tenendo da parte il diagramma completo, che hai anche messo in allegato, ce la fai a disegnarne una versione semplificata?
+Per intendersi, togli i metodi lasciando solo il nome delle classi, e se risulta ancora troppo pieno togli qualche classe lasciando quelle che ritieni più significative.
+Ci metti come didascalia: "Class Diagram - o in italiano - semplificato dell'applicazione. Diagramma completo in allegato" o simile.
+Hai fatto benissimo a mettere quelle due righe di appunti sotto, io direi di spiegare un po' quelle due tecnologie. Cioè cos'è la Dependency Injection, e cos'è la tecnologia delle entity, ok?
+Cerca di farlo in modo semplice, per quello che hai capito tu ovviamente, come se dovessi spiegarlo ai tuoi compagni di classe per intenderci, 
+i quali non sono a digiuno di informatica ma non conoscono questi argomenti specifici.
+JDBC non c'è bisogno, perché dovreste averlo studiato a TPSIT (se avete fatto in tempo).
+
+-ESITO: parli proprio di corso, non so se è corretto, dal momento che non hai descritto il metodo di lavoro.
+
+-DESCRIZIONE DELLE RELAZIONI
+Hai scritto alla toscana, al passato remoto. Ma non sono cose accadute 100 anni fa, usa il passato prossimo.
+
+"grazie ad il" -> "grazie al"
+
+La frase inoltre è troppo lunga, metti ad esempio un punto dopo "mi dava una mano" e comincia una nuova frase senza andare a capo.
+Dopo i punti e le virgole ci vuole uno spazio. ("come se fossimo al bar" lo toglierei)
+
+-ANALISI DEL LAVORO SVOLTO
+Parla in prima persona, non dire lo stagista ma che mi ha introdotto.
+Inoltre qui integra un po': sulla parte tecnica prettamente tecnica pensi di aver fatto un buon lavoro? Hai trovato difficoltà? Come le hai superate?
+ Col senno di ora, c'è qualcosa che faresti diversamente/meglio? Sia dal punto di vista tecnico che non.
+Nel seguito dici che hai imparato a lavorare in maniera collaborativa: prova a spiegare qui perché. Parli anche di resilienza e gestione dello stress, come mai?
+ Ci sono stati momenti di tensione o di stress dovuti magari a scadenze che si avvicinavano? Come li hai superati? Spiegare.
+
+-COMPETENZE ECC.
+Nel titolo hai scritto Derscrizione anziché descrizione.
+Nei due sottotitoli togli "acquisite", tanto c'è sopra.
+Hai scritto tante competenze, vedi se mantenere l'elenco o sfoltirlo un po'. Nel commento al paragrafo precedente ti ho dato qualche suggerimento per alcune, 
+cioè prova a chiarire a te stesso in quale situazione effettivamente ti sei trovato che ti ha portato ad acquisire quella competenza. La creatività dove l'hai usata?
+ Per es. per risolvere un certo problema, ecc. (ai più sembra che nella programmazione ci sia solo fredda logica e bit, ma non è così).
+
+anche Dependency Injection è un design pattern
+
+ASPETTI POSITIVI E NEGATIVI (non mettere la barra ma la e)
+...ed anche la possibilità CHE MI È STATA OFFERTA di continuare....
+
+il tempo è (manca il verbo) insufficiente per....???? spiegare, così rimane appeso.
+
+-CONCLUSIONE
+prima frase: dopo "positiva" metti una virgola. Il concetto inoltre è interessate, spiegalo meglio: cosa intendi per la tua comfort (con la m, non con la n) zone? 
+In che senso l'esperienza ti ha costretto ad uscire? Ad intuito ci arriviamo, ma prova a spiegare. (p.s. metti comfort zone in corsivo)
+Intraprendere si è persa una a ed è diventato intrprendere.
+
+
+-ORIENTAMENTO
+... ho cambiato idea.. (togli "sul proseguire o meno il percorso di studi", è una ripetizione)
+Però il concetto anche qui non lo spieghi: come mai hai cambiato idea? Per esempio, almeno posso ipotizzare,
+perché hai capito che un approfondimento a livello universitario possa fornirti maggiori strumenti...... insomma ci siamo capiti, vedi te come metterlo.
+
+Ti apro la consegna della seconda versione.
+Saluti
+
+
+
+Ok, ora l'aspetto grafico che vedo è quello che avevi voluto dare tu. A mio avviso, però, dovresti diminuire le dimensioni del carattere;
+un carattere troppo grande dà l'idea che non si abbi nulla da scrivere e che si voglia riempire lo spazio.
+
+TIPO DI SOCIETÀ: perché metti le virgolette? Sembra si tratti di una citazione. Devi spiegare con parole tue.
+
+ORGANIGRAMMA TEORICO
+Meglio, ma devi spiegarlo brevemente a parole (per es. sotto il disegno).
+Tra il testo e la figura salta una riga.
+
+ORGANIZZAZIONE DEL LAVORO: non va bene. Se è solo questo quello che hai osservato e capito, togli proprio il capitolo. Se non hai capito cosa devi scrivere, parliamone a voce a lezione.
+
+Introduzione (pag. 4): aggiungi che il corso è durato per tutto il tempo dello stage (scritto per bene non come l'ho scritto io x fare in fretta), perché così mi pare di capire.
+
+Descrizione dell'esigenza:
+"Questa attività avevA" non "avevO".
+Metodo di lavoro: "consisteva nell'ascoltare", non "nel ascoltare"
+
+pag. 5 Tecnologie adottate:
+è rimasto ancora "linuguaggio" anziché "linguaggio"
+
+SOLUZIONE REALIZZATA: attento, c'è il titolo poi una intera pagina bianca, poi l'immagine a pagina nuova. Penso che devi rimpicciolire l'immagine per farla rientrare nella pagina precedente sotto il titolo.
+
+Quando parli della dependency injection, metti le virgolette (come all'inizio). Se è una citazione, devi dire da dove l'hai presa, sempre. Puoi utilizzare, se ti sembra il caso, le note a piè di pagina.
+
+pag. 9 ANALISI DEL LAVORO SVOLTO: "affrontati", non "afrontati"
+
+il resto ok. Ti apro la consegna della terza (e ultima speriamo) versione.
+Ciao

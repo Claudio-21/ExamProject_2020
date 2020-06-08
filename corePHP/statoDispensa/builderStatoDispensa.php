@@ -1,6 +1,7 @@
 <?php
 //Controllo nel caso ci sia qualche hacker
-  session_start();
+  if(!isset($_SESSION['status']))
+    session_start();
   include '../utilityPHP/connessioneDB.php';
   include '../utilityPHP/globalVar.php';
   global $ip, $porta;
@@ -33,7 +34,7 @@
             <tr>
               <th scope=\"col\">Nome Ingrediente</th>
               <th scope=\"col\">Descrizione</th>
-              <th scope=\"col\">Quantità (grammi)</th>
+              <th scope=\"col\">Quantità (grammi/unità)</th>
             </tr>
           </thead>
           <tbody id=\"myTable\">";
@@ -64,7 +65,7 @@
 
         }
 
-        $out .= "
+        $out .= "" . buildParteArticoli() . "
           </tbody>
         </table>";
       } else {
@@ -86,6 +87,46 @@
       die();
     }
 
+    return $out;
+  }
+
+  function buildParteArticoli() {
+    $out = "";
+
+    try {
+      $co = connect();
+      $co->begin_transaction(MYSQLI_TRANS_START_READ_WRITE);
+
+      $sql = "SELECT p.*, a.* FROM prodotto p join articolo a ON(p.idProdotto = a.idArticolo) WHERE p.tipo=\"articolo\" ";
+      $result = $co->query($sql);
+
+      if ($result->num_rows > 0) {
+        // output data of each row
+
+        while($row = $result->fetch_assoc()) {
+          $out .= "<tr class=\"bg-primary text-white\">
+            <td>" . $row['nomeProdotto'] . "</td>
+            <td>/</td>
+            <td>" . $row['quantità'] . "</td
+          </tr>";
+        }
+
+      }
+
+      $co->commit();
+
+      if(!closeConn($co)){
+        $co->rollBack();
+        header("location: http://" . $ip . ":" . $porta . "/corePHP/errorePage/errore.php?msg=Si è verificato un imprevisto<br>Contattre l'amministratore ...");
+        die();
+      }
+
+    } catch (Exception $e) {
+      $co->rollBack();
+      $co->close();
+      header("location: http://" . $ip . ":" . $porta . "/corePHP/errorePage/errore.php?msg=Si è verificato un imprevisto<br>Contattre l'amministratore ...");
+      die();
+    }
     return $out;
   }
 ?>

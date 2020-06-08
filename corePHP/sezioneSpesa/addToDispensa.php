@@ -37,11 +37,11 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Coda Piatti</a>
+          <a class="nav-link text-light" href="../codaPiatti/codaPiattiPronti.php">Coda Piatti</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-light" href="">Ricette</a>
+          <a class="nav-link text-light" href="../ricettePage/ricette.php">Ricette</a>
         </li>
 
         <li class="nav-item">

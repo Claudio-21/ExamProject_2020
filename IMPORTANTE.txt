@@ -1,1 +1,5 @@
-Dentro corePHP\utilityPHP\globalVar campiare $IPpt3 = "1" con $IPpt3 = "3" 
+Dentro corePHP\utilityPHP\globalVar cambiare $IPpt3 = "1" con $IPpt3 = "3"
+
+Dentro tavPHP\utilityPHP\utilFunction.php togliere il commento 45
+Dentro tavPHP\utilityPHP\utilFunction.php commentare riga 46
+Dentro tavPHP\conferma\confOrd.php togliere il commento alla riga 28 e commentare riga 29
