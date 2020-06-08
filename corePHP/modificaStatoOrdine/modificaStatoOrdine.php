@@ -20,21 +20,28 @@
 <?php
   $dataO = $_GET['dataOrdine'];
   $oraO = $_GET['oraOrdine'];
-  $tmpG = (object)serialize($_SESSION['gestoreOrdini']);
-  die(print_r($tmpG->getGestore()));
-  foreach((object)$tmpG->getGestore() as $el) {
-    die("miracolo sono nel foreach");
+  $tmpG = unserialize($_SESSION['gestoreOrdini']);
+
+  foreach($tmpG->getGestore() as $el) {
     if($el->dataOrdine == $dataO && $el->oraOrdine == $oraO) {
-      if(siezeof($el->ordini) <= 0)
-        break;
-      else {
+      if(sizeof($el->ordini) > 0) {
         $_SESSION['updSts'] = "illegal";
         header("location: ../indexAutorized.php");
         die();
       }
-
+      $rs = true;
+      break;
+    }else{
+      $rs = false;
     }
   }
+
+  if(!$rs) {
+    $_SESSION['updSts'] = "illegal";
+    header("location: ../indexAutorized.php");
+    die();
+  }
+
   try {
     $co = connect();
     $co->begin_transaction(MYSQLI_TRANS_START_READ_WRITE);

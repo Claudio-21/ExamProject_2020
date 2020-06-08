@@ -1,6 +1,4 @@
 ::::::::::::::: Applicativo cucina :::::::::::::::
---sistemare dbcheck
---- in inserimento prezzo di un nuovo articolo gestirlo come double/float
 !-- forse permettere di eliminare un prodotto dal db
 ::::::::::::::: Applicativo tavoli :::::::::::::::
 

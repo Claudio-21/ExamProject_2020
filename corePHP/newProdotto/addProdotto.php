@@ -89,7 +89,7 @@
 
          <div class="form-group">
            <label for="prez">Prezzo Prodotto</label>
-           <input type="number" min="1.00" class="form-control" name="prezzoProdotto" id="prez" placeholder="Inserisci prezzo prodotto" required>
+           <input type="number" min="1" step="0.01" class="form-control" name="prezzoProdotto" id="prez" placeholder="Inserisci prezzo prodotto" required>
          </div>
 
          <div class="form-group">
